@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../public/assets/images/FeaturedCoverImage.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: row;
+}

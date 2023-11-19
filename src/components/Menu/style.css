@@ -1,0 +1,27 @@
+.mainMenuContainer {
+    padding: 60px 10px 10px 10px;
+    height: 566px;
+  }
+  
+  .iconsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image {
+    width: 25px;
+    height: 25px;
+    margin: 20px 0 20px 30px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .menu h3 {
+    margin-left: 15px;
+    color: white;
+    font-size: 15px;
+  }
