@@ -7,10 +7,10 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
-  console.log(data, "data")
+  const [current, setCurrent]= useState(-1);
   
   const getData=()=>{
-    fetch('data.json'
+    fetch('./data.json'
     ,{
       headers : { 
         'Content-Type': 'application/json',
@@ -19,11 +19,12 @@ function App() {
     }
     )
       .then(function(response){
-        console.log(response)
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
+        console.log(myJson, "dataaa from fetch");
+        console.log(myJson.Featured, "Featured from fetch");
+        console.log(myJson.TendingNow, "TendingNow from fetch");
         setData(myJson)
       });
   }
@@ -31,11 +32,16 @@ function App() {
   useEffect(() => {       
     getData();
   }, []);
+  
   return (
     <div className="App">
       <div className="appContainer">
         <Menu/>
-        <Page featured={data.Featured}/>
+        <Page featured={data.Featured} 
+              featuredData={data.TendingNow} 
+              current={current} 
+              setCurrent={setCurrent}
+        />
       </div>      
     </div>
   );

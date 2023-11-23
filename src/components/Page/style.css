@@ -39,7 +39,43 @@
     color: white;
     font-size: 16px;
   }
-    
-  .trandingNow {
+   
+  .slider_container{
+    width: 75%;
+  } 
+  .trendingNow {
     margin-top: 48px;
   }
+
+  .trending_container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .trending_slider_left{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .trending_slider_left:hover{
+    opacity:1
+  }
+
+  .trending_img_container{
+    width: 1200px;
+    height: 100%;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+  
+  .trending_img{
+    width: 150px;
+    display: inline-block;
+    padding: 2px;
+    cursor: pointer;;
+  }
+
+  
