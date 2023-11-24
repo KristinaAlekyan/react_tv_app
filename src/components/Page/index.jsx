@@ -68,7 +68,7 @@ const Page = ({ featured, featuredData, current, setCurrent}) => {
             className='trending_img_container'
           >
             {featuredData?featuredData.map((item) => (
-              <img key={item.Id} onClick={()=> onChangeCurrent(item.Id)}
+              <img key={item.Id} onClick={()=> onChangeCurrent(item.Id-1)}
                 className='trending_img'
                 src={`../../assets/images/${item.CoverImage}`}
                 alt='/'
