@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';
 import "./style.css";
 
 const Page = ({ featured, featuredData, current, setCurrent}) => {
-  const [videoPlay, setVideoPlay] = useState(false);
+  const [videoPlay, setVideoPlay] = useState(false);  
   const getCurrentItem = (type) => {
     return (current === -1) ? featured?.[type] : featuredData[current]?.[type]
   }
@@ -40,7 +40,7 @@ const Page = ({ featured, featuredData, current, setCurrent}) => {
         <div >
           {!videoPlay
             ?
-            <img src={current === -1 ? FeaturedTitleImage : `../../assets/images/${featuredData[current]?.CoverImage}`} alt="image" />
+            <img src={current === -1 ? FeaturedTitleImage : `../../assets/images/${featuredData[current]?.CoverImage}`} alt="video_image" />
             :
             <ReactPlayer url='https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4' controls={true} playing={true}/>
           }

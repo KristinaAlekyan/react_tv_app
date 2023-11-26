@@ -1,27 +1,66 @@
 .mainMenuContainer {
-    padding: 60px 10px 10px 10px;
-    height: 566px;
-  }
-  
-  .iconsContainer {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .image {
-    width: 25px;
-    height: 25px;
-    margin: 20px 0 20px 30px;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .menu h3 {
-    margin-left: 15px;
-    color: white;
-    font-size: 15px;
-  }
+  padding: 60px 10px 10px 10px;
+  height: 566px;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 25px;
+  height: 25px;
+  margin: 20px 0 20px 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu:hover{
+  background-color: grey;
+}
+
+.menu h3 {
+  margin-left: 15px;
+  color: white;
+  font-size: 15px;
+}
+
+.menuIsOpened {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.8;
+}
+
+.additionalMenuHidden {  
+  margin-top: 80px;
+  color: white;
+  visibility: hidden;  
+}
+
+.additionalMenuVisible{  
+  margin-top: 80px;
+  color: white;
+  visibility: visible; 
+}
+
+.additionalMenuContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.additonalMenuItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.additonalMenuItem h3 {
+  margin-left: 15px;
+  color: white;
+  font-size: 15px;
+}

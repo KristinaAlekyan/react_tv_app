@@ -7,6 +7,7 @@ import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [current, setCurrent]= useState(-1);
   
   const getData=()=>{
@@ -22,9 +23,6 @@ function App() {
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson, "dataaa from fetch");
-        console.log(myJson.Featured, "Featured from fetch");
-        console.log(myJson.TendingNow, "TendingNow from fetch");
         setData(myJson)
       });
   }
@@ -34,9 +32,9 @@ function App() {
   }, []);
   
   return (
-    <div className="App">
+    <div className={!isMenuOpen?"App": "App menuIsOpened" }>
       <div className="appContainer">
-        <Menu/>
+        <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         <Page featured={data.Featured} 
               featuredData={data.TendingNow} 
               current={current} 
